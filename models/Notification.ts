@@ -261,6 +261,9 @@ export class Notification {
     * Channel: Push Notifications Platform: iOS Sound file that is included in your app to play instead of the default device notification sound. Pass nil to disable vibration and sound for the notification. Example: \"notification.wav\" 
     */
     'ios_sound'?: string;
+    /**
+     * Channel: Push Notifications Platform: iOS Interruption Level.  Pass ['active','silent','time_sensitive,'critical'] to modify interruption level.
+     */
     'ios_interruption_level'?: string;
     /**
     * Channel: Push Notifications Platform: Android &#9888;&#65039;Deprecated, this field doesn\'t work on Android 8 (Oreo) and newer devices! Please use Notification Categories / Channels noted above instead to support ALL versions of Android. Sound file that is included in your app to play instead of the default device notification sound. Pass nil to disable sound for the notification. NOTE: Leave off file extension for Android. Example: \"notification\" 
