@@ -334,6 +334,12 @@ var BasicNotificationAllOf = (function () {
             "format": ""
         },
         {
+            "name": "ios_interruption_level",
+            "baseName": "ios_interruption_level",
+            "type": "string",
+            "format": ""
+        },
+        {
             "name": "android_sound",
             "baseName": "android_sound",
             "type": "string",

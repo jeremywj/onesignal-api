@@ -57,6 +57,7 @@ export declare class BasicNotificationAllOf {
     'firefox_icon'?: string;
     'chrome_icon'?: string;
     'ios_sound'?: string;
+    'ios_interruption_level'?: string;
     'android_sound'?: string;
     'huawei_sound'?: string;
     'adm_sound'?: string;

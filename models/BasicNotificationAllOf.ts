@@ -208,6 +208,7 @@ export class BasicNotificationAllOf {
     * Channel: Push Notifications Platform: iOS Sound file that is included in your app to play instead of the default device notification sound. Pass nil to disable vibration and sound for the notification. Example: \"notification.wav\" 
     */
     'ios_sound'?: string;
+    'ios_interruption_level'?: string;
     /**
     * Channel: Push Notifications Platform: Android &#9888;&#65039;Deprecated, this field doesn\'t work on Android 8 (Oreo) and newer devices! Please use Notification Categories / Channels noted above instead to support ALL versions of Android. Sound file that is included in your app to play instead of the default device notification sound. Pass nil to disable sound for the notification. NOTE: Leave off file extension for Android. Example: \"notification\" 
     */
@@ -360,7 +361,7 @@ export class BasicNotificationAllOf {
 
     static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+    static readonly attributeTypeMap: Array<{ name: string, baseName: string, type: string, format: string }> = [
         {
             "name": "id",
             "baseName": "id",
@@ -686,6 +687,12 @@ export class BasicNotificationAllOf {
             "format": ""
         },
         {
+            "name": "ios_interruption_level",
+            "baseName": "ios_interruption_level",
+            "type": "string",
+            "format": ""
+        },
+        {
             "name": "android_sound",
             "baseName": "android_sound",
             "type": "string",
@@ -912,7 +919,7 @@ export class BasicNotificationAllOf {
             "baseName": "custom_data",
             "type": "object",
             "format": ""
-        }    ];
+        }];
 
     static getAttributeTypeMap() {
         return BasicNotificationAllOf.attributeTypeMap;
@@ -923,5 +930,5 @@ export class BasicNotificationAllOf {
 }
 
 
-export type BasicNotificationAllOfAggregationEnum = "sum" | "count" ;
+export type BasicNotificationAllOfAggregationEnum = "sum" | "count";
 

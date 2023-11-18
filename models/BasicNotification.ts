@@ -261,6 +261,7 @@ export class BasicNotification {
     * Channel: Push Notifications Platform: iOS Sound file that is included in your app to play instead of the default device notification sound. Pass nil to disable vibration and sound for the notification. Example: \"notification.wav\" 
     */
     'ios_sound'?: string;
+    'ios_interruption_level'?: string;
     /**
     * Channel: Push Notifications Platform: Android &#9888;&#65039;Deprecated, this field doesn\'t work on Android 8 (Oreo) and newer devices! Please use Notification Categories / Channels noted above instead to support ALL versions of Android. Sound file that is included in your app to play instead of the default device notification sound. Pass nil to disable sound for the notification. NOTE: Leave off file extension for Android. Example: \"notification\" 
     */
@@ -413,7 +414,7 @@ export class BasicNotification {
 
     static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+    static readonly attributeTypeMap: Array<{ name: string, baseName: string, type: string, format: string }> = [
         {
             "name": "included_segments",
             "baseName": "included_segments",
@@ -823,6 +824,12 @@ export class BasicNotification {
             "format": ""
         },
         {
+            "name": "ios_interruption_level",
+            "baseName": "ios_interruption_level",
+            "type": "string",
+            "format": ""
+        },
+        {
             "name": "android_sound",
             "baseName": "android_sound",
             "type": "string",
@@ -1049,7 +1056,7 @@ export class BasicNotification {
             "baseName": "custom_data",
             "type": "object",
             "format": ""
-        }    ];
+        }];
 
     static getAttributeTypeMap() {
         return BasicNotification.attributeTypeMap;
@@ -1060,6 +1067,6 @@ export class BasicNotification {
 }
 
 
-export type BasicNotificationTargetChannelEnum = "push" | "email" | "sms" ;
-export type BasicNotificationAggregationEnum = "sum" | "count" ;
+export type BasicNotificationTargetChannelEnum = "push" | "email" | "sms";
+export type BasicNotificationAggregationEnum = "sum" | "count";
 
