@@ -22,7 +22,7 @@ export class UpdateLiveActivityRequest {
 
     static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+    static readonly attributeTypeMap: Array<{ name: string, baseName: string, type: string, format: string }> = [
         {
             "name": "name",
             "baseName": "name",
@@ -46,7 +46,7 @@ export class UpdateLiveActivityRequest {
             "baseName": "dismiss_at",
             "type": "number",
             "format": ""
-        }    ];
+        }];
 
     static getAttributeTypeMap() {
         return UpdateLiveActivityRequest.attributeTypeMap;
@@ -57,6 +57,6 @@ export class UpdateLiveActivityRequest {
 }
 
 
-export type UpdateLiveActivityRequestNameEnum = "headings" | "contents" | "ios_sound" | "priority_level" ;
-export type UpdateLiveActivityRequestEventEnum = "update" | "end" ;
+export type UpdateLiveActivityRequestNameEnum = "headings" | "contents" | "ios_sound" | "priority_level";
+export type UpdateLiveActivityRequestEventEnum = "update" | "end";
 

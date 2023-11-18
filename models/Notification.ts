@@ -829,7 +829,7 @@ export class Notification {
         },
         {
             "name": "ios_interruption_level",
-            "baseName": "ios_inturruption_level",
+            "baseName": "ios_interruption_level",
             "type": "string",
             "format": ""
         },
